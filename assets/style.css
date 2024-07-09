@@ -21,7 +21,12 @@ body {
 .top-header .name {
 	font-size: 26px;
 }
-
+/**/
+.carousel-item{
+	height: 80%;
+	width:100%;
+}
+/**/
 .nav ul {
 	display: flex;
 	list-style-type: none;
