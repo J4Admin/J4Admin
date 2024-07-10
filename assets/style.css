@@ -40,7 +40,7 @@ body {
 
 .nav a {
 	text-decoration: none;
-	color: #000
+	color: #000;
 }
 
 .social-link img {
@@ -77,22 +77,24 @@ body {
 
 }
 #about-me {
-	flex: 2
+	flex: 2;
 }
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 60px;
-	font-size: 30px;
+	font-size: 2.2em; /* change sizing 30px > 2.2em */
 }
 .about-me__introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	font-size: 1.8em;	/* adding sizing */
 }
+
 #about-me p {
 	width: 80%;
-	font-size: 14px;
+	font-size: 1.4em; /* change sizing 14px > 1.4 em */
 }
 
 #gallery {
@@ -101,6 +103,7 @@ body {
 .title{
 	text-align: center;
 	padding-block: 2em;
+	font-size: 2em;
 }
 .gallery .nav {
 	justify-content: center;
@@ -111,7 +114,7 @@ body {
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
-	color: #000
+	color: #000;
 }
 .item-column {
 	position: relative;
@@ -148,10 +151,12 @@ body {
 	margin: auto;
 	padding-block: 3em;
 }
+
 .quote__text {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
+	font-size: 2em, /* sizing > 2em */
 
 }
 .quote__author {
@@ -246,7 +251,7 @@ form textarea {
 }
 input[type="submit"] {
 	background-color: #BEB45A;
-	padding: .5em 1em
+	padding: .5em 1em;
 }
 
 @media all and (max-width: 1180px) {
@@ -260,7 +265,7 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me__introduction, #about-me p {
 		width: 100%;
 	}
 }
@@ -290,10 +295,10 @@ input[type="submit"] {
 		flex-direction: column;
 	}
 	.service {
-		width: 100%;
+		width: 100%;;
 		max-width: 100%;
 		height: auto;
-		margin: 2em 0
+		margin: 2em 0;
 	}
 	.service__description{
 		margin-bottom: 1em;
