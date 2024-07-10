@@ -111,7 +111,6 @@ body {
 .nav-pills .nav-link .active, .nav-pills .show > .nav-link {
 	color: #fff;
 	background-color: #BEB45A;
-
 	border-radius:0 ;
 }
 /*adding class for show category selected*/
@@ -120,9 +119,11 @@ body {
 	font-weight: bold !important;
 	color: #ffffff !important;
 	border-radius:0 !important;
+	font-size:1.3em !important;
 }
 .nav-pills .nav-link {
 	color: #000;
+	font-size: 1.2em;
 }
 .item-column {
 	position: relative;
