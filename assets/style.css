@@ -114,9 +114,9 @@ body {
 	border-radius:0 ;
 }
 /*adding class for show category selected*/
-.active-tag{
+.navlink .active-tag{
 	background-color: #BEB45A !important;
-	color: #fff !important;
+	color: #ffffff !important;
 	border-radius:0 !important;
 }
 .nav-pills .nav-link {
