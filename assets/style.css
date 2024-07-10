@@ -108,11 +108,11 @@ body {
 .gallery .nav {
 	justify-content: center;
 }
-/*.nav-pills .nav-link .active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link .active, .nav-pills .show > .nav-link {
 	color: #fff;
 	background-color: #BEB45A;
 	border-radius:0 ;
-}*/
+}
 /*adding class for show category selected*/
 .navlink .active-tag{
 	background-color: #BEB45A !important;
