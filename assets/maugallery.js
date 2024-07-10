@@ -1,7 +1,7 @@
 (function($) {
   $.fn.mauGallery = function(options) {
-    var options = $.extend($.fn.mauGallery.defaults, options);
-    var tagsCollection = [];
+    let options = $.extend($.fn.mauGallery.defaults, options);
+    let tagsCollection = [];
     return this.each(function() {
       $.fn.mauGallery.methods.createRowWrapper($(this));
       if (options.lightBox) {
@@ -19,7 +19,7 @@
           $.fn.mauGallery.methods.responsiveImageItem($(this));
           $.fn.mauGallery.methods.moveItemInRowWrapper($(this));
           $.fn.mauGallery.methods.wrapItemInColumn($(this), options.columns);
-          var theTag = $(this).data("gallery-tag");
+          let theTag = $(this).data("gallery-tag");
           if (
             options.showTags &&
             theTag !== undefined &&
@@ -82,7 +82,7 @@
           `<div class='item-column mb-4 col-${Math.ceil(12 / columns)}'></div>`
         );
       } else if (columns.constructor === Object) {
-        var columnClasses = "";
+        let columnClasses = "";
         if (columns.xs) {
           columnClasses += ` col-${Math.ceil(12 / columns.xs)}`;
         }
@@ -145,18 +145,23 @@
           }
         });
       }
-      let index = 0,
-        next = null;
+      // let index = 0,
+      //  next = null;
 
-      $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
+      // $(imagesCollection).each(function(i) {
+      //  if ($(activeImage).attr("src") === $(this).attr("src")) {
+      //    index = i ;
+
+      let index = imagesCollection.indexOf(activeImage[0]);
+      let prev =
+        imagesCollection[(index - 1 + imagesCollection.length) % imagesCollection.length];
+      $(".lightboxImage").attr("src", $(prev).attr("src"));
         }
       });
-      next =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+    //  next =
+    //    imagesCollection[index] ||
+    //    imagesCollection[imagesCollection.length - 1];
+    //  $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     nextImage() {
       let activeImage = null;
@@ -184,16 +189,18 @@
           }
         });
       }
-      let index = 0,
-        next = null;
-
-      $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+      // let index = 0,
+      // next = null;
+      let index = imagesCollection.indexOf(activeImage[0]);
+        let next = imagesCollection[(index + 1) % imagesCollection.length];
+        $(".lightboxImage").attr("src", $(next).attr("src"));
+      // $(imagesCollection).each(function(i) {
+      //  if ($(activeImage).attr("src") === $(this).attr("src")) {
+      //    index = i;
         }
       });
-      next = imagesCollection[index] || imagesCollection[0];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+    //  next = imagesCollection[index] || imagesCollection[0];
+    //  $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
@@ -219,13 +226,13 @@
             </div>`);
     },
     showItemTags(gallery, position, tags) {
-      var tagItems =
+      let tagItems =
         '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
       $.each(tags, function(index, value) {
         tagItems += `<li class="nav-item active">
                 <span class="nav-link"  data-images-toggle="${value}">${value}</span></li>`;
       });
-      var tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
+      let tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
 
       if (position === "bottom") {
         gallery.append(tagsRow);
@@ -242,7 +249,7 @@
       $(".active-tag").removeClass("active active-tag");
       $(this).addClass("active-tag");
 
-      var tag = $(this).data("images-toggle");
+      let tag = $(this).data("images-toggle");
 
       $(".gallery-item").each(function() {
         $(this)
