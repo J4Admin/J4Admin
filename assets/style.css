@@ -113,17 +113,16 @@ body {
 	background-color: #BEB45A;
 	border-radius:0 ;
 }
-.nav-pills .nav-link {
-	color: #000;
-	font-size: 1.2em;
-}
 /*adding class for show category selected*/
 .navlink .active-tag{
 	background-color: #BEB45A !important;
 	font-weight: bold !important;
 	color: #ffffff !important;
-	border-radius: 0 !important;
-	font-size: 1.3em !important;
+	border-radius:0 !important;
+	font-size:
+}
+.nav-pills .nav-link {
+	color: #000;
 }
 .item-column {
 	position: relative;
