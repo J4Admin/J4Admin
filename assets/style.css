@@ -112,13 +112,13 @@ body {
 	color: #fff;
 	background-color: #BEB45A;
 	border-radius:0 ;
-} -- useless */
+} -- desable for fix background-color, activeTag */
 
 /*adding class for show category selected*/
 .active-tag {
 	background-color: #BEB45A !important;
 	font-weight: bold !important;
-	color: #ffffff !important;
+	color: #000000 !important;
 	border-radius:0 !important;
 }
 
