@@ -58,10 +58,12 @@
     });
 
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
-    $(".gallery").on("click", ".img-prev", () {
+
+    $(".gallery").on("click", ".img-prev", () => {
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
     });
-    $(".gallery").on("click", ".img-next", () {
+
+    $(".gallery").on("click", ".img-next", () => {
       $.fn.mauGallery.methods.nextImage(options.lightboxId)
     });
   };
