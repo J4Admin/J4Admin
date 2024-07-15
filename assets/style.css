@@ -121,6 +121,13 @@ body {
 	color: #000000 !important;
 	border-radius:0 !important;
 }
+/*Adding flex propriety for fix position of modal*/
+/*increasing accessibility */
+#myAwesomeLightbox{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 .nav-pills .nav-link {
 	color: #000;
