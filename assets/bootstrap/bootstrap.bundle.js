@@ -4709,7 +4709,6 @@
       this._element.style.justifyContent = 'center';
       this._element.style.alignItems = 'center';
 
-
       this._element.removeAttribute('aria-hidden');
 
       this._element.setAttribute('aria-modal', true);
